@@ -1,9 +1,11 @@
-masa=int(input("ingrese la masa: "))
-fuerza=int(input("ingrese la fuerza: "))
-tiempo=int(input("ingrese el tiempo: "))
+masa=float(input("ingrese la masa: "))
+fuerza=float(input("ingrese la fuerza: "))
+tiempo=float(input("ingrese el tiempo: "))
 friccionsn=input("ingrese s si hay friccion o ingrese n si no hay: ")
 planoincl=input("es plano inclinado? si/no: ")
 gravedad=10
+x=[]
+y=[]
 
 ue=0
 ud=0
@@ -67,8 +69,13 @@ if fuerza>fre:
 else:
     print("No se vence la friccion")
     print("La aceleracion es 0")
-plt.plot(a, fuerza)
-plt.xlabel(fuerza)
+    y.append(fre)
+    x.append(fuerza)
+
+widht=0,1
+
+plt.plot(a, tiempo)
+plt.xlabel(tiempo)
 plt.ylabel(a)
 
 plt.show()
